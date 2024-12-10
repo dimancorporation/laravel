@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateInvoicesTable extends Migration
@@ -24,9 +25,12 @@ class CreateInvoicesTable extends Migration
             $table->dateTime('close_date')->nullable();
 
             // Добавляем внешний ключ к таблице users
-            $table->foreignId('id')
-                ->constrained('users')
+            $table->foreign('partner_id')
+                ->references('id')
+                ->on('users')
                 ->onDelete('cascade');
+//                ->constrained('users')
+//                ->onDelete('cascade');
 
             // Создаем индекс по полю partner_id
             $table->index('partner_id');

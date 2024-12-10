@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateReferalsTable extends Migration
@@ -30,8 +31,10 @@ class CreateReferalsTable extends Migration
             $table->text('link_payment')->nullable();
 
             // Внешний ключ к таблице users
-            $table->foreignId('id')
-                ->constrained('users')
+            $table->foreign('partner_id')
+                ->references('id')
+                ->on('users')
+//                ->constrained('users')
                 ->onDelete('cascade');
 
             // Индекс по полю partner_id

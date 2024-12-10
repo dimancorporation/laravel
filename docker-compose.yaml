@@ -1,0 +1,43 @@
+services:
+  php:
+    build: .
+    container_name: php-fpm
+    volumes:
+      - ./:/var/www/html
+    restart: always
+    networks:
+      - laravel
+
+  web:
+    image: nginx
+    container_name: nginx
+    volumes:
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./:/var/www/html
+    ports:
+      - "81:80"
+    restart: always
+    networks:
+      - laravel
+    depends_on:
+      - php
+      - db
+
+  db:
+    image: postgres:latest
+    container_name: pgsql
+    restart: always
+    networks:
+      - laravel
+    environment:
+      - POSTGRES_DB=${DB_DATABASE}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./.docker/conf/postgres/:/docker-entrypoint-initdb.d/
+
+networks:
+  laravel:
+    driver: bridge

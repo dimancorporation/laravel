@@ -1,9 +1,0 @@
-.py-4 {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-@media (min-width: 300px) {
-    .container, .container-sm, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 100%;
-    }
-}

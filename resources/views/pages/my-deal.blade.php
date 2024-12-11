@@ -3,25 +3,29 @@
 @section('title', 'Мое Дело')
 
 @section('content')
-    <div class="limiter" style="">
+    <div class="limiter my-deal p-b-50">
         <div class="container-login100">
-            <div class="wrap-login100" style="margin:0;border-radius:0;">
-                <div class="text-center"><h5 style="color: white;padding-top: 50px;"><b> Тест сделка демонстрация</b></h5><br></div>
-                <div style="display: none;" id="message" class="leaflet p-b-20">
+            <div class="wrap-login100">
+                <div class="text-center">
+                    <h5 class="white-text">
+                        <b>Тест сделка демонстрация</b>
+                    </h5>
+                    <br>
+                </div>
+                <div id="message" class="leaflet p-b-20 d-none">
                     <div class="text-center">
-                        <div class="check-message"><h5 style="color: white;"><b></b></h5></div>
+                        <div class="check-message"><h5 class="white-text"><b></b></h5></div>
                     </div>
                 </div>
                 <div class="img-logo">
-                    <img width="150" src="{{asset('images/logo_bank2.png')}}">
+                    <img width="150" src="{{asset('images/logo_bank2.png')}}" alt="">
                 </div>
                 <div class="grid-box-business">
                     <div class="grid-container-business">
                         <div class="leaflet p-b-20">
                             <div class="text-center p-b-20">
-                                <h2 style="color: white">Мое дело</h2>
+                                <h2 class="white-text">Мое дело</h2>
                             </div>
-
                             <div class="size-table">
                                 <div class="container-table">
 
@@ -46,27 +50,23 @@
                                                 </div>
                                             </td>
                                         </tr>
-
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-
-
                         <div class="leaflet p-b-20">
                             <div class="text-center p-b-20">
-                                <h2 style="color: white">Мои оплаты</h2>
+                                <h2 class="white-text">Мои оплаты</h2>
                             </div>
                             <div class="size-table">
                                 <div class="container-table">
-
                                     <table class="table-payments">
                                         <tbody>
                                         <tr>
                                             <td>Договор на сумму:</td>
                                             <td>
-                                                <div class="check-payment" style="background: #0E3F72;">
+                                                <div class="check-payment bg-payment">
                                                     <a class="txt3">150000 руб</a></div>
                                             </td>
                                         </tr>
@@ -80,11 +80,10 @@
                                         <tr>
                                             <td>Остаток по договору:</td>
                                             <td>
-                                                <div class="check-payment" style="background: #0E3F72;">
+                                                <div class="check-payment bg-payment">
                                                     <a class="txt3">140000 руб</a></div>
                                             </td>
                                         </tr>
-
                                         </tbody>
                                     </table>
                                 </div>
@@ -93,11 +92,9 @@
                     </div>
                 </div>
             </div>
-
-
-            <center>
+            <div class="text-center">
                 <div class="text-center p-t-50">
-                    <h2 style="color: #0F3F73;">Процесс выполнения</h2>
+                    <h2 class="title-progress-bar">Процесс выполнения</h2>
                 </div>
                 <div class="container-progress">
                     <div class="progress progress-striped">
@@ -105,141 +102,121 @@
                                 64%</p></div>
                     </div>
                 </div>
-
                 <div class="grid-box">
                     <div class="grid-container">
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status02.png')}}" alt="file">
-                            <!-- <p>Запрос БКИ</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status02.png')}}" alt="Запрос БКИ">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status03.png')}}" alt="file">
-                            <!-- <p>Запрос ОКБ</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status03.png')}}" alt="Запрос ОКБ">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status04.png')}}" alt="file">
-                            <!-- <p>Запрос РС</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status04.png')}}" alt="Запрос РС">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status05.png')}}" alt="file">
-                            <!-- <p>Скоринг бюро</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status05.png')}}" alt="Скоринг бюро">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status06.png')}}" alt="file">
-                            <!-- <p>Запрос ФНС</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status06.png')}}" alt="Запрос ФН">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status07.png')}}" alt="file">
-                            <!-- <p> Запрос в ЕГРН</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status07.png')}}" alt="Запрос в ЕГРН">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status08.png')}}" alt="file">
-                            <!-- <p>Запрос недвижимость</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status08.png')}}" alt="Запрос недвижимость">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status09.png')}}" alt="file">
-                            <!-- <p>Запрос ГИБДД</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status09.png')}}" alt="Запрос ГИБДД">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status10.png')}}" alt="file">
-                            <!-- <p>Запрос ГиМС</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status10.png')}}" alt="Запрос ГиМС">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status11.png')}}" alt="file">
-                            <!-- <p>Запрос Россгвардия</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status11.png')}}" alt="Запрос Россгвардия">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status12.png')}}" alt="file">
-                            <!-- <p>Запрос Ростехнадзор</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status12.png')}}" alt="Запрос Ростехнадзор">
                         </div>
                         <div>
                             <img width="150" height="200"
                                  src="{{asset('images/my-deal-statuses/not_completed/status13.png')}}"
-                                 alt="file">                            <!-- <p>Уведомление кредиторов</p> -->
+                                 alt="Уведомление кредиторов">
                         </div>
                         <div>
                             <img width="150" height="200"
                                  src="{{asset('images/my-deal-statuses/not_completed/status14.png')}}"
-                                 alt="file">                            <!-- <p>Подготовка Искового Заявления</p> -->
+                                 alt="Подготовка Искового Заявления">
                         </div>
                         <div>
                             <img width="150" height="200"
                                  src="{{asset('images/my-deal-statuses/not_completed/status15.png')}}"
-                                 alt="file">                            <!-- <p>Подготовка Списока кредиторов</p> -->
+                                 alt="Подготовка Списока кредиторов">
                         </div>
                         <div>
                             <img width="150" height="200"
                                  src="{{asset('images/my-deal-statuses/not_completed/status16.png')}}"
-                                 alt="file">                            <!-- <p>Подготовка Описи имущества</p> -->
+                                 alt="Подготовка Описи имущества">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status17.png')}}" alt="file">
-                            <!-- <p>Подготовка приложений к заявлению</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status17.png')}}" alt="Подготовка приложений к заявлению">
                         </div>
                         <div>
                             <img width="150" height="200"
                                  src="{{asset('images/my-deal-statuses/not_completed/status18.png')}}"
-                                 alt="file">                            <!-- <p>Выписки по лицевым счетам</p> -->
+                                 alt="Выписки по лицевым счетам">
                         </div>
                         <div>
                             <img width="150" height="200"
                                  src="{{asset('images/my-deal-statuses/not_completed/status19.png')}}"
-                                 alt="file">                            <!-- <p>Отправка Заявления в суд</p> -->
+                                 alt="Отправка Заявления в суд">
                         </div>
                         <div>
                             <img width="150" height="200"
-                                 src="{{asset('images/my-deal-statuses/not_completed/status20.png')}}" alt="file">
-                            <!-- <p>Заседание в АС</p> -->
+                                 src="{{asset('images/my-deal-statuses/not_completed/status20.png')}}" alt="Заседание в АС">
                         </div>
                         <div>
                             <img width="150" height="200"
                                  src="{{asset('images/my-deal-statuses/not_completed/status21.png')}}"
-                                 alt="file">                            <!-- <p>Ознакомление состояния дела в АС</p> -->
+                                 alt="Ознакомление состояния дела в АС">
                         </div>
                         <div>
                             <img width="150" height="200"
                                  src="{{asset('images/my-deal-statuses/not_completed/status22.png')}}"
-                                 alt="file">
-                            <!-- <p>Выбор способа получения прожиточного минимума</p> -->
+                                 alt="Выбор способа получения прожиточного минимума">
                         </div>
                         <div>
                             <img width="150" height="200"
                                  src="{{asset('images/my-deal-statuses/not_completed/status23.png')}}"
-                                 alt="file">                            <!-- <p>Контроль состояния дела в АС</p> -->
+                                 alt="Контроль состояния дела в АС">
                         </div>
                         <div>
                             <img width="150" height="200"
                                  src="{{asset('images/my-deal-statuses/not_completed/status24.png')}}"
-                                 alt="file">                            <!-- <p>Завершение процесса в суде</p> -->
+                                 alt="Завершение процесса в суде">
                         </div>
                         <div>
                             <img width="150" height="200"
                                  src="{{asset('images/my-deal-statuses/not_completed/status25.png')}}"
-                                 alt="file">                            <!-- <p>Освобождение от долгов</p> -->
+                                 alt="Освобождение от долгов">
                         </div>
                     </div>
                 </div>
                 <br><br>
-                <a class="txt4" style="color: #0F3F73" href="/offer-agreement">Договор оферты</a>
-                <!-- <a class="txt4" style="color: #0F3F73" href="https://bankrotoff-oplata.ru/offerta">Договор оферты</a> -->
-
-            </center>
-            <!-- <div class="text-center">
-
-            </div> -->
+                <a class="txt4 offer-agreement" href="/offer-agreement">Договор оферты</a>
+            </div>
         </div>
     </div>
-    <div class="message-container-place" id="message-container" style="padding-top:100px;"></div>
+    <div class="message-container-place" id="message-container"></div>
 @endsection

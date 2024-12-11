@@ -14,9 +14,6 @@ use App\Http\Controllers\PageController;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 Route::get('/my-deal', [PageController::class, 'myDeal']);
 Route::get('/status-description', [PageController::class, 'statusDescription']);
 Route::get('/document-list', [PageController::class, 'documentList']);

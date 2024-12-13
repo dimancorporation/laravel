@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\MyDealService;
-use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class PageController extends Controller
 {
@@ -63,5 +63,29 @@ class PageController extends Controller
     public function payment()
     {
         return view('pages.payment');
+    }
+
+    public function myPayments()
+    {
+        $myPaymentsData = [
+            'payments' => [
+                [
+                    "b24_id" => 123456,
+                    "close_date" => Carbon::parse('2022-10-15')->formatLocalized('%d %B %Y'),
+                    "opportunity" => number_format(12500, 0, '.', ' ')
+                ],
+                [
+                    "b24_id" => 987654,
+                    "close_date" => date('d.m.Y', strtotime("2023-02-01")),
+                    "opportunity" => number_format(5000, 0, '.', ' ')
+                ],
+                [
+                    "b24_id" => 321654,
+                    "close_date" => date('d.m.Y', strtotime("2023-03-01")),
+                    "opportunity" => number_format(7500, 0, '.', ' ')
+                ]
+            ]
+        ];
+        return view('pages.my-payments', $myPaymentsData);
     }
 }

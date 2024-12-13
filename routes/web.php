@@ -19,3 +19,4 @@ Route::get('/status-description', [PageController::class, 'statusDescription']);
 Route::get('/document-list', [PageController::class, 'documentList']);
 Route::get('/offer-agreement', [PageController::class, 'offerAgreement']);
 Route::get('/payment', [PageController::class, 'payment']);
+Route::get('/my-payments', [PageController::class, 'myPayments']);

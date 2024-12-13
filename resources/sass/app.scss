@@ -515,7 +515,6 @@ a:focus {
     height: auto;
     padding: 5px;
     text-align: center;
-
 }
 
 .check-payment:hover {
@@ -1486,6 +1485,41 @@ nav input {
 
 .title-progress-bar, .offer-agreement {
     color: var(--gr_dark);
+}
+
+.debtor {
+    height: 100%;
+    color: black;
+}
+
+.debtor-msg {
+    padding-top: 50px;
+}
+
+.debtor-msg div {
+    padding-bottom: 20px;
+}
+
+.f-w {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.debtor .check-payment {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: var(--bg);
+    width: 200px;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.wrap-phone {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }
 
 /* 404 styles */

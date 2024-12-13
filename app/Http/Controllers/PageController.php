@@ -2,13 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\MyDealService;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+    private $myDealService;
+
+    public function __construct(MyDealService $myDealService)
+    {
+        $this->myDealService = $myDealService;
+    }
+
     public function myDeal()
     {
-        return view('pages.my-deal');
+        $status2 = 'Готов на подачу в АС'; /* получаем статус из битрикс24 */
+        $myDealData = $this->myDealService->getMyDealData($status2);
+        return view('pages.my-deal', $myDealData);
     }
 
     public function statusDescription()

@@ -62,7 +62,7 @@ jobs:
           DB_CONNECTION: pgsql
           DB_USERNAME: laravel
           DB_PASSWORD: secret
-          DB_DATABASE: laravel
+          DB_DATABASE: postgres
           DB_HOST: localhost
           DB_PORT: '5432'
 
@@ -75,6 +75,6 @@ jobs:
           DB_USERNAME: laravel
           DB_PASSWORD: secret
           DB_DATABASE: laravel
-          DB_HOST: localhost
+          DB_HOST: postgres
           DB_PORT: '5432'
         run: vendor/bin/phpunit

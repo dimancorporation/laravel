@@ -62,8 +62,8 @@ jobs:
           DB_CONNECTION: pgsql
           DB_USERNAME: laravel
           DB_PASSWORD: secret
-          DB_DATABASE: postgres
-          DB_HOST: localhost
+          DB_DATABASE: laravel
+          DB_HOST: postgres
           DB_PORT: '5432'
 
       - name: Directory Permissions

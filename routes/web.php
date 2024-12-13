@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 
@@ -20,3 +21,5 @@ Route::get('/document-list', [PageController::class, 'documentList']);
 Route::get('/offer-agreement', [PageController::class, 'offerAgreement']);
 Route::get('/payment', [PageController::class, 'payment']);
 Route::get('/my-payments', [PageController::class, 'myPayments']);
+
+Route::resource('users', 'UserController');

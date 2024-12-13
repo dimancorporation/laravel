@@ -117,11 +117,11 @@ class MyDealService
             $filename = array_shift($task);
             $thresholds = $task;
             if ($key < $thresholds[0] || $key == 500) {
-                $imagePaths[] = Storage::url("public/images/my-deal-statuses/not_completed/$filename.png");
+                $imagePaths[] = "<img width='150' height='200' src='images/my-deal-statuses/not_completed/$filename.png' alt='$alt'/>";
             } elseif (($thresholds[1] ?? $thresholds[0]) >= $key) {
-                $imagePaths[] = Storage::url("public/images/my-deal-statuses/in_progress/$filename.png");
+                $imagePaths[] = "<img width='150' height='200' src='images/my-deal-statuses/in_progress/$filename.png' alt='$alt'/>";
             } else {
-                $imagePaths[] = Storage::url("public/images/my-deal-statuses/completed/$filename.png");
+                $imagePaths[] = "<img width='150' height='200' src='images/my-deal-statuses/completed/$filename.png' alt='$alt'/>";
             }
         }
 

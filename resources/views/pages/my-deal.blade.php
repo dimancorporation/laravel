@@ -132,12 +132,6 @@
                                     {{$progressBarText}}
                                 </p>
                             </div>
-
-{{--                            <div class="progress-bar" style="width: 64%; animation: progressAnimationStrike38 6s;">--}}
-{{--                                <p>--}}
-{{--                                    64%--}}
-{{--                                </p>--}}
-{{--                            </div>--}}
                         </div>
                     </div>
                     <div class="grid-box">

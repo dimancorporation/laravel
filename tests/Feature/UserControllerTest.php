@@ -18,7 +18,7 @@ class UserControllerTest extends TestCase
      */
     public function test_user_index_returns_successful_response()
     {
-        $user = factory(User::class)->create();
+        $user = factory(User::class)->create(['is_first_auth' => false]);
         $this->actingAs($user);
 
         factory(User::class, 10)->create();
@@ -35,7 +35,7 @@ class UserControllerTest extends TestCase
      */
     public function test_user_can_be_created()
     {
-        $user = factory(User::class)->create();
+        $user = factory(User::class)->create(['is_first_auth' => false]);
         $this->actingAs($user);
 
         $data = factory(User::class)
@@ -58,7 +58,7 @@ class UserControllerTest extends TestCase
      */
     public function test_user_can_be_fetched()
     {
-        $user = factory(User::class)->create();
+        $user = factory(User::class)->create(['is_first_auth' => false]);
         $this->actingAs($user);
 
         $data = factory(User::class)->create();
@@ -75,7 +75,7 @@ class UserControllerTest extends TestCase
      */
     public function test_user_can_be_updated()
     {
-        $user = factory(User::class)->create();
+        $user = factory(User::class)->create(['is_first_auth' => false]);
         $this->actingAs($user);
 
         $data = factory(User::class)->create();
@@ -99,7 +99,7 @@ class UserControllerTest extends TestCase
      */
     public function test_user_can_be_deleted()
     {
-        $user = factory(User::class)->create();
+        $user = factory(User::class)->create(['is_first_auth' => false]);
         $this->actingAs($user);
 
         $data = factory(User::class)->create();

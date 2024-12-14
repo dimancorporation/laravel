@@ -30,5 +30,6 @@ $factory->define(User::class, function (Faker $faker) {
         'role' => $faker->randomElement(['admin', 'user', 'blocked']),
         'email' => $faker->unique()->safeEmail,
         'password' => 'password',
+        'is_first_auth' => true
     ];
 });

@@ -18,6 +18,9 @@ class UserControllerTest extends TestCase
      */
     public function test_user_index_returns_successful_response()
     {
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+
         factory(User::class, 10)->create();
 
         $response = $this->get('/users');
@@ -32,6 +35,9 @@ class UserControllerTest extends TestCase
      */
     public function test_user_can_be_created()
     {
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+
         $data = factory(User::class)
             ->make()
             ->toArray();
@@ -52,6 +58,9 @@ class UserControllerTest extends TestCase
      */
     public function test_user_can_be_fetched()
     {
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+
         $data = factory(User::class)->create();
 
         $response = $this->getJson("/users/{$data->id}");
@@ -66,6 +75,9 @@ class UserControllerTest extends TestCase
      */
     public function test_user_can_be_updated()
     {
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+
         $data = factory(User::class)->create();
 
         $updatedData = [
@@ -87,6 +99,9 @@ class UserControllerTest extends TestCase
      */
     public function test_user_can_be_deleted()
     {
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+
         $data = factory(User::class)->create();
 
         $response = $this->delete("/users/{$data->id}");

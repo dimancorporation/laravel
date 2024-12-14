@@ -30,7 +30,8 @@ class User extends Authenticatable
         'seal_token',
         'role',
         'password',
-        'email'
+        'email',
+        'is_first_auth'
     ];
 
     /**

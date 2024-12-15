@@ -13,8 +13,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('App\Services\MyDealService', function ($app) {
-            return new \App\Services\MyDealService();
+        $this->app->singleton(\App\Services\MyDealService::class);
+//        $this->app->singleton(\App\Services\Crest::class);
+        $this->app->singleton(\App\Services\BitrixService::class, function ($app) {
+            return new \App\Services\BitrixService(
+                config('services.bitrix24.base_url'),
+                config('services.bitrix24.access_token')
+            );
         });
     }
 

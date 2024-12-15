@@ -12,6 +12,8 @@
   --bt_light: #4E76A5;
   --bt_dark: #0E3F72;
   --color_error: #c80000;
+  --color_dark: #093267;
+  --color_light: #4e86cf;
 }
 
 * {
@@ -862,7 +864,6 @@ a:focus {
   width: 0;
   height: 2px;
   transition: all 0.4s;
-  background: var(--color_basic);
   background: linear-gradient(to left, var(--color_dark), var(--color_light));
 }
 
@@ -1488,6 +1489,67 @@ nav input {
 
 .my-payments .wrap-login100-form-btn:hover .login100-form-bgbtn {
   background: var(--gr_light);
+}
+
+/* login page */
+
+.login {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0;
+}
+
+.login .wrap-login100-form-btn {
+  border-radius: 10px;
+}
+
+.login .wrap-login100-form-btn:hover .login100-form-bgbtn {
+  background: var(--gr_light);
+}
+
+.login .container-login100 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: var(--bg_container);
+}
+
+.login .container-login100 .wrap-login100 {
+  width: 390px;
+  background: var(--bg);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 77px 55px 33px 55px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.login .btn-show-pass {
+  font-size: 15px;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding-right: 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+@media (max-width: 576px) {
+  .login .wrap-login100 {
+    padding: 77px 15px 33px 15px;
+  }
 }
 
 /* 404 styles */

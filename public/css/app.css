@@ -162,16 +162,6 @@ iframe {
   display: none;
 }
 
-body {
-  background-color: var(--bg);
-  color: var(--fg);
-  font: 1em/1.5 sans-serif;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  transition: background-color var(--trans-dur);
-}
-
 .limiter {
   width: 100%;
   margin: 0 auto;

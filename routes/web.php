@@ -18,14 +18,14 @@ use App\Http\Controllers\PageController;
 
 Auth::routes();
 
-Route::middleware(['auth'])->group(function () {
+//Route::middleware(['auth'])->group(function () {
     Route::get('/my-deal', [PageController::class, 'myDeal']);
     Route::get('/status-description', [PageController::class, 'statusDescription']);
     Route::get('/document-list', [PageController::class, 'documentList']);
     Route::get('/offer-agreement', [PageController::class, 'offerAgreement']);
     Route::get('/payment', [PageController::class, 'payment']);
     Route::get('/my-payments', [PageController::class, 'myPayments']);
-});
+//});
 
 Route::get('/password-setup', function () {
     return view('auth.passwords.setup');

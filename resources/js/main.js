@@ -9,7 +9,7 @@
 });
 
 let isShowPassword = false;
-document.querySelector('.btn-show-pass').addEventListener('click', function(e) {
+document.querySelector('.btn-show-pass') && document.querySelector('.btn-show-pass').addEventListener('click', function(e) {
     if (!isShowPassword) {
         e.target.closest('.wrap-input100').querySelector('input').setAttribute('type', 'text');
         e.target.closest('.wrap-input100').querySelector('i').classList.remove('zmdi-eye');

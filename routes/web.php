@@ -18,16 +18,17 @@ use App\Http\Controllers\PageController;
 
 Auth::routes();
 
-Route::get('/my-deal', [PageController::class, 'myDeal']);
-Route::get('/status-description', [PageController::class, 'statusDescription']);
-Route::get('/document-list', [PageController::class, 'documentList']);
-Route::get('/offer-agreement', [PageController::class, 'offerAgreement']);
-Route::get('/payment', [PageController::class, 'payment']);
-Route::get('/my-payments', [PageController::class, 'myPayments']);
-
+Route::middleware(['auth'])->group(function () {
+    Route::get('/my-deal', [PageController::class, 'myDeal']);
+    Route::get('/status-description', [PageController::class, 'statusDescription']);
+    Route::get('/document-list', [PageController::class, 'documentList']);
+    Route::get('/offer-agreement', [PageController::class, 'offerAgreement']);
+    Route::get('/payment', [PageController::class, 'payment']);
+    Route::get('/my-payments', [PageController::class, 'myPayments']);
+});
 
 Route::get('/password-setup', function () {
-    return view('password.setup');
+    return view('auth.passwords.setup');
 })->name('password.setup');
 
 Route::middleware(['auth', 'first.auth'])->group(function () {
